@@ -2,7 +2,7 @@
 <html>
 
 <head>
-    <title>List Favorite Cars</title>
+    <title>Tic-Tac-Toe</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- Official Bootstrap -->
     <link rel="stylesheet" href="lib/bootstrap/dist/css/bootstrap.min.css">
@@ -13,6 +13,52 @@
 
 <body>
 
+    <div class="container">
+        <div class="page-header">
+            <h1>Tic-Tac-Toe</h1>
+        </div>
+
+        <div id="game" class="panel panel-primary">
+            <div class="hidden panel-heading"></div>
+            <div class="panel-body">
+                <div class="row">
+                    <div class="col-xs-6 col-xs-push-3">
+                        <h2><span id="turn">X</span>'s turn</h2>
+                        <div id="board" class="container-fluid">
+                            <div class="row">
+                                <div class="col-xs-4"><div id="cell-0-0" class="cell"></div></div>
+                                <div class="col-xs-4"><div id="cell-0-1" class="cell"></div></div>
+                                <div class="col-xs-4"><div id="cell-0-2" class="cell"></div></div>
+                            </div>
+                            <div class="row">
+                                <div class="col-xs-4"><div id="cell-1-0" class="cell"></div></div>
+                                <div class="col-xs-4"><div id="cell-1-1" class="cell"></div></div>
+                                <div class="col-xs-4"><div id="cell-1-2" class="cell"></div></div>
+                            </div>
+                            <div class="row">
+                                <div class="col-xs-4"><div id="cell-2-0" class="cell"></div></div>
+                                <div class="col-xs-4"><div id="cell-2-1" class="cell"></div></div>
+                                <div class="col-xs-4"><div id="cell-2-2" class="cell"></div></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-3 col-xs-pull-6 score">
+                        <h2>X Wins</h2>
+                        <div id="xwin">0</div>
+                    </div>
+                    <div class="col-xs-3 score">
+                        <h2>O Wins</h2>
+                        <div id="owin">0</div>
+                    </div>
+                </div>
+            </div>
+            <div class="hidden panel-footer">
+                <button id="again" class="btn btn-primary btn-lg">Play Again</button>
+            </div>
+        </div>
+        <div id="error" style="display: none" class="alert alert-danger" role="alert"></div>
+
+    </div>
 
     <!-- Official JQuery -->
     <script src="lib/jquery/dist/jquery.min.js"></script>

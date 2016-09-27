@@ -1,3 +1,46 @@
-h2 {
-    color: blue;
+.container {
+    max-width: 500px;
+    min-width: 340px;
+}
+
+.panel-heading {
+    text-align: center;
+}
+
+.panel-body {
+    background-color: #dddddd;
+}
+
+.panel h2 {
+    text-align: center;
+    font-size: 26px;
+}
+
+.panel-footer {
+    text-align: center;
+}
+
+.score h2 {
+    white-space: nowrap;
+    text-decoration: underline;
+}
+.score div {
+    text-align: center;
+    font-size: 26px;
+}
+
+.col-xs-3,
+.col-xs-4,
+.col-xs-6 {
+    margin: 0;
+    padding: 0;
+}
+
+#board .row .cell {
+    height: 1.4em;
+    font-size: 64px;
+    background-color: #777777;
+    margin: 2px;
+    color: #ffffff;
+    text-align: center;
 }
