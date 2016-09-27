@@ -17,12 +17,10 @@ $(function() {
     var $panel = $('.panel');
     var $notification = $('#game .panel-heading');
     var $cells = $('.cell');
-    var $footer = $('#game .panel-footer');
     var $turn = $('#turn');
 
     // Setup
     $notification.hide().removeClass('hidden');
-    $footer.hide().removeClass('hidden');
 
     // Register Event Handlers
     $cells.on('click', function(ev) {
@@ -48,8 +46,6 @@ $(function() {
         });
         // Hide notification
         $notification.slideUp(function() {
-            // Hide footer
-            $footer.slideUp();
             // Reset Styles
             $notification.html('');
             $panel.removeClass('panel-success panel-danger').addClass('panel-primary');
@@ -66,15 +62,11 @@ $(function() {
     }
     function showWinner(winner) {
         $panel.removeClass('panel-primary').addClass('panel-success');
-        $notification.html(winner + ' is the winner!').slideDown(function() {
-            $footer.slideDown();
-        });
+        $notification.html(winner + ' is the winner!').slideDown();
     }
     function showDraw() {
         $panel.removeClass('panel-primary').addClass('panel-danger');
-        $notification.html('The game is a draw').slideDown(function() {
-            $footer.slideDown();
-        });
+        $notification.html('The game is a draw').slideDown();
     }
 });
 

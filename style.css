@@ -5,9 +5,11 @@
 
 .panel-heading {
     text-align: center;
+    font-size: 32px;
 }
 
-.panel-body {
+.panel-body,
+.panel-footer {
     background-color: #dddddd;
 }
 
